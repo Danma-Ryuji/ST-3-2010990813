@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="favicon.jpg"/>
+    <title>Your Weight in Solar System</title>
+    <style>
+        body{
+        background-image:url('spacebg.jpg');
+        background-attachment: fixed;
+        background-size: cover;
+        background-repeat: no-repeat;
+        }
+        #header{
+            margin-top: 30px ;
+            text-align: center;
+        }
+        #search{
+            position: relative;
+            text-align: center;
+            border-radius: 30px 0px 30px 0px;
+            padding:10px;
+            width: 20%;
+            height: 20px;
+            font-size: 20px;
+        }
+        #content{
+            margin-top: 0%;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+        }
+        .planets{
+            background-size:cover ;
+            background-image: url('spacebg.jpg');
+            width:200px;
+            height: 200px;
+            display: flex;
+            flex-direction: column-reverse;
+            margin: 5%;
+            border-radius: 20px 0px 20px 0px;
+            overflow: hidden;
+        }
+        #bonus{
+            width: 500px;
+            height: 500px;
+            border-radius: 50px 0px 50px 0px;
+        }
+
+        .planets:hover{
+            transform: translateY(-15px);
+            transition: all ease 1s;
+        }
+        #main{
+            display:flex;
+
+        }
+        span{
+            opacity: .8;
+            font-size: 30px;
+            color:white;
+            text-align: center;
+            background-color: rgb(22, 10, 10);
+            font-family: 'Trebuchet MS', sans-serif;
+        }
+        #heading{
+            background-color: grey;
+            width: 30%;
+            height: 50px;
+            position: relative;
+            margin: auto;
+            text-align: center;
+            border-style: groove;
+            border: 10px black;
+            border-radius: 30px 0px 30px 0px;
+            font-family: 'Trebuchet MS', sans-serif;
+            opacity: 0.5;
+        }
+        #main_heading{
+            margin-top: -2%;
+            background-color:rgb(112, 167, 218);
+            text-align: center;
+            font-family: 'Trebuchet MS', sans-serif;
+            font-size: 25px;
+            opacity: 0.3;
+        }
+    </style>
+</head>
+<body>
+
+    <script>
+        const Output=(val2)=>{ 
+            let val=document.getElementById("search").value;
+            val=Number(val);
+            
+            if(val2=="Mercury"){
+                let val1=val*0.38;
+                val1=val1.toFixed(2);
+                alert("The weight of person on Mercury is "+val1+"Kg");
+            }
+            else  if(val2=="Venus"){
+                let val1=val*0.91;
+                val1=val1.toFixed(2);
+                alert("The weight of person on Venus is "+val1+"Kg");
+            }
+            else  if(val2=="Earth"){
+                let val1=val*1;
+                val1=val1.toFixed(2);
+                alert("The weight of person on Earth is "+val1+"Kg");
+            }
+            else  if(val2=="Mars"){
+                let val1=val*0.38;
+                val1=val1.toFixed(2);
+                alert("The weight of person on Mars is "+val1+"Kg");
+            }   
+            else  if(val2=="Jupiter"){
+                let val1=val*2.34;
+                val1=val1.toFixed(2);
+                alert("The weight of person on Jupiter is "+val1+"Kg");
+            } 
+            else  if(val2=="Saturn"){
+                let val1=val*1.06;
+                val1=val1.toFixed(2);
+                alert("The weight of person on Saturn is "+val1+"Kg");
+            }
+            else  if(val2=="Uranus"){
+                let val1=val*0.92;
+                val1=val1.toFixed(2);
+                alert("The weight of person on Uranus is "+val1+"Kg");
+            }
+            else  if(val2=="Neptune"){
+                let val1=val*1.19;
+                val1=val1.toFixed(2);
+                alert("The weight of person on Neptune is "+val1+"Kg");
+            }
+            else  if(val2=="Sun"){
+                let val1=val*27.01;
+                val1=val1.toFixed(2);
+                alert("The weight of person on Sun is "+val1+"Kg");
+            }
+        }
+    </script>
+
+    <div id="main" >
+        <div id="display">
+            <div id="main_heading"><h1>WEIGHT IN SOLAR SYSTEM</h1></div>
+            <div id="header">
+                <input type="text" placeholder="Enter Weight on Earth in kg" name="search" id="search">
+            </div>
+            <div id="heading">
+                <h1>Select planet to see weight</h1>
+            </div>
+            <div id="content">
+                <div class="planets" style="background-image: url('mercury.jpg');" onclick="Output('Mercury');"><span >MERCURY</span></div>
+                <div class="planets" style="background-image: url('venus.jpg');" onclick="Output('Venus');"><span >VENUS</span></div>
+                <div class="planets" style="background-image: url('earth.jpg');" onclick="Output('Earth');"><span >EARTH</span></div>
+                <div class="planets" style="background-image: url('mars.jpg');" onclick="Output('Mars');"><span >MARS</span></div>
+                <div class="planets" style="background-image: url('jupiter.jpg');" onclick="Output('Jupiter');"><span >JUPITER</span></div>
+                <div class="planets" style="background-image: url('saturn.jpg');" onclick="Output('Saturn');"><span >SATURN</span></div>
+                <div class="planets" style="background-image: url('uranus.jpg');" onclick="Output('Uranus');"><span >URANUS</span></div>
+                <div class="planets" style="background-image: url('neptune.jpg');" onclick="Output('Neptune');"><span >NEPTUNE</span></div>
+                <div class="planets" id="bonus" style="background-image: url('sun.jpg');" onclick="Output('Sun');"><span >SUN</span></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
